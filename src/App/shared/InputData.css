@@ -1,0 +1,12 @@
+.InputContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 4px;
+}
+.InputStyle {
+  width: 545px;
+  height: 25px;
+}

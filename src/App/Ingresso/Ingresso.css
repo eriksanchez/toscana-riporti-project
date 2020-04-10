@@ -1,0 +1,17 @@
+.IngressoContainer {
+  margin-right: 20%;
+  margin-left: 20%;
+  border-style: solid;
+  border-width: 1.5px 0px 1.5px 0px;
+  border-color: rgba(55, 84, 152);
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+.BodyContainer {
+  display: flex;
+  flex-direction: column;
+}
+.InputStyleBarcode {
+  width: 545px;
+  height: 25px;
+}

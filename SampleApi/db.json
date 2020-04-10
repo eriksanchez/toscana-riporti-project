@@ -1,0 +1,261 @@
+{
+  "barcode": [
+    {
+      "id": 23153,
+      "cliente": "MECCANICA GRANDI SRL",
+      "articolo": "155104190 - Albero pompa",
+      "note": "*Riporto ceramico Me130 + Rettifica di finitura Pos 08 Prog. M.GRANDI 155104190 Giostra N.B.: PULIRE I PEZZI DAL GRASSO",
+      "quantita": 211,
+      "ricettaAncorante": 1,
+      "ricettaRiporto": 3,
+      "numPezziLavorati": 24,
+      "dataOra": 0,
+      "quantitaAncorante": 822,
+      "quantitaRiporto": 2215,
+      "durataLavorazione": 238,
+      "status": "Chiusura ODP"
+    },
+    {
+      "id": 38748,
+      "cliente": "BARTEC INDUSTRIAL INC.",
+      "articolo": "1308490 - Filtro meccanico",
+      "note": "*This is a note refering to id 38748 in which contains informatin regarding .....",
+      "quantita": 394,
+      "ricettaAncorante": 4,
+      "ricettaRiporto": 2,
+      "numPezziLavorati": 32,
+      "dataOra": 0,
+      "quantitaAncorante": 872,
+      "quantitaRiporto": 1000,
+      "durataLavorazione": 321,
+      "status": "Chiusura ODP"
+    },
+    {
+      "id": 48738,
+      "cliente": "SEARS INC.",
+      "articolo": "8549389 - Engine fan",
+      "note": "*This is a note refering to id 8549389 in which contains informatin regarding .....",
+      "quantita": 292,
+      "ricettaAncorante": 1,
+      "ricettaRiporto": 3,
+      "numPezziLavorati": 14,
+      "dataOra": 0,
+      "quantitaAncorante": 900,
+      "quantitaRiporto": 3922,
+      "durataLavorazione": 200,
+      "status": ""
+    },
+    {
+      "id": 58739,
+      "cliente": "RAISING CANES CO.",
+      "articolo": "2223938 - hydropumps for springs",
+      "note": "*This is a note refering to id 2223938 in which contains informatin regarding .....",
+      "quantita": 321,
+      "ricettaAncorante": 5,
+      "ricettaRiporto": 7,
+      "numPezziLavorati": 32,
+      "dataOra": 0,
+      "quantitaAncorante": 222,
+      "quantitaRiporto": 2235,
+      "durataLavorazione": 400,
+      "status": ""
+    },
+    {
+      "id": 65773,
+      "cliente": "HUGGIES PAPER CO.",
+      "articolo": "3993210 - Printing mechanism ",
+      "note": "*This is a note refering to id 3993210 in which contains informatin regarding .....",
+      "quantita": 49,
+      "ricettaAncorante": 1,
+      "ricettaRiporto": 9,
+      "numPezziLavorati": 34,
+      "dataOra": 0,
+      "quantitaAncorante": 542,
+      "quantitaRiporto": 3433,
+      "durataLavorazione": 234,
+      "status": ""
+    },
+    {
+      "id": 10292,
+      "cliente": "SHELL OIL INC.",
+      "articolo": "1308490 - Filtro meccanico",
+      "note": "*This is a note refering to id 1308490 in which contains informatin regarding .....",
+      "quantita": 29,
+      "ricettaAncorante": 2,
+      "ricettaRiporto": 7,
+      "numPezziLavorati": 33,
+      "dataOra": 0,
+      "quantitaAncorante": 234,
+      "quantitaRiporto": 3444,
+      "durataLavorazione": 220,
+      "status": ""
+    },
+    {
+      "id": 49432,
+      "cliente": "IN AND OUT INC.",
+      "articolo": "3993020 - Crane lever arm",
+      "note": "*This is a note refering to id 3993020 in which contains informatin regarding .....",
+      "quantita": 211,
+      "ricettaAncorante": 2,
+      "ricettaRiporto": 1,
+      "numPezziLavorati": 44,
+      "dataOra": 0,
+      "quantitaAncorante": 968,
+      "quantitaRiporto": 3829,
+      "durataLavorazione": 344,
+      "status": ""
+    },
+    {
+      "id": 87888,
+      "cliente": "AUTOZONE INC.",
+      "articolo": "4847382 - electrical outlet",
+      "note": "*This is a note refering to id 4847382 in which contains informatin regarding .....",
+      "quantita": 2,
+      "ricettaAncorante": 2,
+      "ricettaRiporto": 4,
+      "numPezziLavorati": 38,
+      "dataOra": 0,
+      "quantitaAncorante": 322,
+      "quantitaRiporto": 5415,
+      "durataLavorazione": 595,
+      "status": ""
+    },
+    {
+      "id": 21300,
+      "cliente": "SEAHORSE",
+      "articolo": "2000291 - Filtro meccanico",
+      "note": "*This is a note refering to id 2000291 in which contains informatin regarding .....",
+      "quantita": 34,
+      "ricettaAncorante": 14,
+      "ricettaRiporto": 23,
+      "numPezziLavorati": 55,
+      "dataOra": 0,
+      "quantitaAncorante": 399,
+      "quantitaRiporto": 2015,
+      "durataLavorazione": 598,
+      "status": ""
+    }
+  ],
+  "operatores": [
+    {
+      "id": 1,
+      "name": "Erik Sanchez",
+      "email": "eriksanchez@yahoo.com",
+      "phone": "3319301040"
+    },
+    {
+      "id": 2,
+      "name": "Andrea Bacci",
+      "email": "andreabacci@gmail.com",
+      "phone": "3899327567"
+    },
+    {
+      "id": 3,
+      "name": "Maurice Cardona",
+      "email": "mauricecardona@yahoo.com",
+      "phone": "2173894789"
+    },
+    {
+      "id": 4,
+      "name": "Martin Bastos",
+      "email": "martinbastos@hotmail.com",
+      "phone": "8037461939"
+    },
+    {
+      "id": 5,
+      "name": "Rosina Bastos",
+      "email": "rosinabastos@gmail.com",
+      "phone": "8323801040"
+    },
+    {
+      "id": 6,
+      "name": "Mabel Caraway",
+      "email": "mabelcaraway@gmail.com",
+      "phone": "8475633111"
+    },
+    {
+      "id": 7,
+      "name": "Antonio Banderas",
+      "email": "antoiobanderas@yahoo.com",
+      "phone": "4139092337"
+    },
+    {
+      "id": 8,
+      "name": "Sophie Matioli",
+      "email": "sophiematioli@hotmail.com",
+      "phone": "2210994849"
+    },
+    {
+      "id": 9,
+      "name": "Tommaso Regoli",
+      "email": "tommasoregoli@gmail.com",
+      "phone": "7131337280"
+    },
+    {
+      "id": 10,
+      "name": "Marco DeRossi",
+      "email": "marcoderossi@yahoo.com",
+      "phone": "2924498888"
+    },
+    {
+      "id": 11,
+      "name": "Naruto Hirashima",
+      "email": "narutohirashima@yahoo.com",
+      "phone": "4893094839"
+    },
+    {
+      "id": 12,
+      "name": "Leandro Fernandez",
+      "email": "leandrofernandez@gmail.com",
+      "phone": "339485777"
+    },
+    {
+      "id": 13,
+      "name": "Gigi Buffon",
+      "email": "gigibuffon@yahoo.com",
+      "phone": "9893748928"
+    },
+    {
+      "id": 14,
+      "name": "Luis Marquez",
+      "email": "luismarquez@hotmail.com",
+      "phone": "7873892902"
+    },
+    {
+      "id": 15,
+      "name": "Selena Gomez",
+      "email": "selenagomez@gmail.com",
+      "phone": "4847390298"
+    },
+    {
+      "id": 16,
+      "name": "David Dobrik",
+      "email": "daviddobrik@gmail.com",
+      "phone": "1287398489"
+    },
+    {
+      "id": 17,
+      "name": "Lorenzo Medici",
+      "email": "lorenzomedici@yahoo.com",
+      "phone": "2987484987"
+    },
+    {
+      "id": 18,
+      "name": "Todd Bravehart",
+      "email": "toddbravehart@hotmail.com",
+      "phone": "8883374726"
+    },
+    {
+      "id": 19,
+      "name": "Roberto Mancini",
+      "email": "robertomancini@gmail.com",
+      "phone": "4494300293"
+    },
+    {
+      "id": 20,
+      "name": "Ted Mosbey",
+      "email": "tedmosbey@yahoo.com",
+      "phone": "5559302983"
+    }
+  ]
+}

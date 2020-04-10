@@ -1,0 +1,30 @@
+.Container {
+  background-color: rgba(128, 128, 128);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  justify-content: space-evenly;
+  margin-bottom: 3px;
+}
+
+.HeaderText {
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+}
+.ButtonContainer {
+  margin-left: 75%;
+}
+.Button {
+  background-color: rgba(60, 144, 211);
+  color: white;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: rgba(60, 144, 211, 0.3);
+  color: white;
+  cursor: not-allowed;
+}

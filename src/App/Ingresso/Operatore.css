@@ -1,0 +1,14 @@
+.OperatoreContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(216, 235, 242);
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 6px;
+  padding-top: 9px;
+  color: rgb(0, 0, 0, 0.7);
+}
+.SelectStyle {
+  width: 550px;
+}

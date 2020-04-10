@@ -1,0 +1,44 @@
+.AttrezzaggioContainer {
+  margin-right: 20%;
+  margin-left: 20%;
+  border-style: solid;
+  border-width: 1.5px 0px 1.5px 0px;
+  border-color: rgba(55, 84, 152);
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+.BodyContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1.5px 1.5px 1.5px 1.5px;
+  border-color: rgba(180, 206, 211);
+  margin-bottom: 3px;
+}
+.FooterContainerAttrezzaggio {
+  background-color: rgba(216, 235, 242);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerButtons {
+  background-color: rgba(60, 144, 211);
+  height: 30px;
+  color: white;
+  margin-right: 20px;
+  font-size: 12px;
+}
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: rgba(60, 144, 211, 0.3);
+  color: white;
+  cursor: not-allowed;
+}
+.InputClassStyle {
+  width: 650px;
+  height: 25px;
+  background-color: rgba(239, 239, 239);
+}
