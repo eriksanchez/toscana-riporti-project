@@ -15,12 +15,13 @@ class Ingresso extends React.Component {
     this.state = {
       doesExist: false,
       showModal: false,
-      showModalCompletedID: false
+      showModalCompletedID: false,
     };
     this.handlClick = this.handlClick.bind(this);
   }
 
-  async handlClick() {
+  async handlClick(e) {
+    e.preventDefault();
     const barcodeExists = await this.props.fetchBarcodeCheck(
       this.props.Barcode.BarcodeSelected
     );
@@ -72,7 +73,7 @@ class Ingresso extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 export default connect(mapStateToProps, actionCreators)(Ingresso);

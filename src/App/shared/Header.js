@@ -19,7 +19,8 @@ class Header extends React.Component {
                 : false
             }
             //[Ingresso: modify to check if barcode exists]
-            onClick={this.props.handlClick}
+            onClick={(e) => this.props.handlClick(e)}
+            type="button"
           >
             {this.props.buttonName}
           </button>
@@ -28,7 +29,7 @@ class Header extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 export default connect(mapStateToProps)(Header);

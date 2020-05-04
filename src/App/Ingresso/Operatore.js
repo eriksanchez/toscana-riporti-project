@@ -22,7 +22,7 @@ class Operatore extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 export default connect(mapStateToProps, actionCreators)(Operatore);

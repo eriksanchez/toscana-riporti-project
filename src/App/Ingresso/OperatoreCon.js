@@ -8,7 +8,7 @@ class OperatoreCon extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      OperatoreSelected: false
+      OperatoreSelected: false,
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -20,11 +20,20 @@ class OperatoreCon extends React.Component {
   }
 
   render() {
-    const listOfOperatores = this.props.Operatore.OperatoreList.map(op => {
+    const listOfOperatores = this.props.Operatore.OperatoreList.map((op) => {
       return {
         value: op.name,
-        label: op.name
+        label: op.name,
       };
+    });
+    listOfOperatores.sort(function (a, b) {
+      if (a.value < b.value) {
+        return -1;
+      }
+      if (a.value > b.value) {
+        return 1;
+      }
+      return 0;
     });
     return (
       <div>
@@ -37,7 +46,7 @@ class OperatoreCon extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 

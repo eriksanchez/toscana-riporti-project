@@ -8,7 +8,7 @@ class InputData extends React.Component {
           {this.props.dataInputTitle}
         </div>
         <div>
-          <form>
+          <form onSubmit={(e) => e.preventDefault()}>
             <input
               className={this.props.inputStyle}
               placeholder={this.props.data}
