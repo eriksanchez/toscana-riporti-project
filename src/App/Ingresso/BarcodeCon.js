@@ -9,13 +9,14 @@ class BarcodeCon extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      BarcodeSelected: false
+      BarcodeSelected: false,
     };
     this.onChange = this.onChange.bind(this);
   }
   onChange(e) {
     this.props.selectBarcode(e.target.value);
   }
+
   render() {
     return (
       <div>
@@ -28,7 +29,7 @@ class BarcodeCon extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 

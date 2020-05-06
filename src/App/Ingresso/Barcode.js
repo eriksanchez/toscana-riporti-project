@@ -6,7 +6,7 @@ class Barcode extends React.Component {
       <div className="BarcodeContainer">
         <div>Barcode ingresso in postazione</div>
         <div>
-          <form>
+          <form onSubmit={(event) => event.preventDefault()}>
             <input
               className={this.props.inputStyle}
               type="number"
