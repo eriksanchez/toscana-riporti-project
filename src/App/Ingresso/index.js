@@ -7,6 +7,7 @@ import BarcodeCon from "./BarcodeCon";
 import Header from "../shared/Header";
 import Modal from "../../Modal";
 import Auth from "../Routers/Auth";
+import LoadingSpinner from "../../LoadingSpinner";
 import * as actionCreators from "../../Redux/actions/index";
 
 class Ingresso extends React.Component {
