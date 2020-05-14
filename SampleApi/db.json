@@ -13,7 +13,7 @@
       "quantitaAncorante": 822,
       "quantitaRiporto": 2215,
       "durataLavorazione": 238,
-      "status": "Chiusura ODP"
+      "status": "Riporto Completato"
     },
     {
       "id": 38748,
@@ -58,7 +58,7 @@
       "quantitaAncorante": 222,
       "quantitaRiporto": 2235,
       "durataLavorazione": 400,
-      "status": ""
+      "status": "Riporto Completato"
     },
     {
       "id": 65773,

@@ -16,21 +16,17 @@ class Attrezzaggio extends React.Component {
     this.state = {
       buttonOption: true,
       sospendi: true,
-      showModal: false
+      showModal: false,
     };
     this.handlClickSospendi = this.handlClickSospendi.bind(this);
     this.handlClickRiprendi = this.handlClickRiprendi.bind(this);
     this.handlClickCompletato = this.handlClickCompletato.bind(this);
   }
   componentDidMount() {
-    this.props.fetchCliente(this.props.Barcode.BarcodeSelected);
-    this.props.fetchArticolo(this.props.Barcode.BarcodeSelected);
-    this.props.fetchNote(this.props.Barcode.BarcodeSelected);
-    this.props.fetchQuantita(this.props.Barcode.BarcodeSelected);
-    this.props.fetchRicettaAncorante(this.props.Barcode.BarcodeSelected);
-    this.props.fetchRicettaRiporto(this.props.Barcode.BarcodeSelected);
+    this.props.fetchForAttrezzaggio(this.props.Barcode.BarcodeSelected);
+
     this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-      status: "Attrezzaggio Started"
+      status: "Attrezzaggio Started",
     });
   }
   renderActions() {
@@ -40,7 +36,7 @@ class Attrezzaggio extends React.Component {
           onClick={() => {
             history.push("/Ingresso");
             this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-              status: "Attrezzaggio Sospeso"
+              status: "Attrezzaggio Sospeso",
             });
           }}
           className="ui button negative"
@@ -63,25 +59,25 @@ class Attrezzaggio extends React.Component {
     this.setState({ showModal: true });
   };
   handlClickSospendi() {
-    this.setState(prevState => ({
-      sospendi: !prevState.sospendi
+    this.setState((prevState) => ({
+      sospendi: !prevState.sospendi,
     }));
     const sospendi = new Date();
     this.props.addSospendi(sospendi);
     this.props.setAttrezzaggioSospeso();
     this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-      status: "Attrezzaggio Sospeso"
+      status: "Attrezzaggio Sospeso",
     });
   }
   handlClickRiprendi() {
-    this.setState(prevState => ({
-      sospendi: !prevState.sospendi
+    this.setState((prevState) => ({
+      sospendi: !prevState.sospendi,
     }));
     const riprendi = new Date();
     this.props.addRiprendi(riprendi);
     this.props.setAttrezzaggioRipreso();
     this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-      status: "Attrezzaggio Ripreso"
+      status: "Attrezzaggio Ripreso",
     });
   }
   handlClickCompletato() {
@@ -89,7 +85,7 @@ class Attrezzaggio extends React.Component {
     this.props.setCompletatoAtrrezzaggio(completato);
     this.props.setAttrezzaggioCompletato();
     this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-      status: "Attrezzaggio Completato"
+      status: "Attrezzaggio Completato",
     });
   }
 
@@ -175,7 +171,7 @@ class Attrezzaggio extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 export default connect(mapStateToProps, actionCreators)(Attrezzaggio);

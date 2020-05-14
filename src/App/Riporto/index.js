@@ -14,24 +14,17 @@ class Riporto extends React.Component {
     super(props);
     this.state = {
       buttonOption: true,
-      showModal: false
+      showModal: false,
     };
     this.handlClick = this.handlClick.bind(this);
   }
   componentDidMount() {
-    this.props.fetchCliente(this.props.Barcode.BarcodeSelected);
-    this.props.fetchArticolo(this.props.Barcode.BarcodeSelected);
-    this.props.fetchNote(this.props.Barcode.BarcodeSelected);
-    this.props.fetchQuantita(this.props.Barcode.BarcodeSelected);
-    this.props.fetchRicettaAncorante(this.props.Barcode.BarcodeSelected);
-    this.props.fetchRicettaRiporto(this.props.Barcode.BarcodeSelected);
-    this.props.fetchNumPezzi(this.props.Barcode.BarcodeSelected);
-    this.props.fetchDataOra(this.props.Barcode.BarcodeSelected);
+    this.props.fetchForRiporto(this.props.Barcode.BarcodeSelected);
   }
   handlClick() {
     this.props.setRiportoCompletato();
     this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-      status: "Riporto Completato"
+      status: "Riporto Completato",
     });
   }
   renderActions() {
@@ -41,7 +34,7 @@ class Riporto extends React.Component {
           onClick={() => {
             history.push("/Attrezzaggio");
             this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-              status: "Riporto Sospeso"
+              status: "Riporto Sospeso",
             });
           }}
           className="ui button negative"
@@ -145,7 +138,7 @@ class Riporto extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 export default connect(mapStateToProps, actionCreators)(Riporto);

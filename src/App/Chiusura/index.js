@@ -15,18 +15,12 @@ class Chiusura extends React.Component {
       buttonOption: true,
       showModal: false,
       showModalChiusura: false,
-      chiusuraODP: false
+      chiusuraODP: false,
     };
   }
   componentDidMount() {
-    this.props.fetchCliente(this.props.Barcode.BarcodeSelected);
-    this.props.fetchArticolo(this.props.Barcode.BarcodeSelected);
-    this.props.fetchNote(this.props.Barcode.BarcodeSelected);
-    this.props.fetchQuantita(this.props.Barcode.BarcodeSelected);
-    this.props.fetchNumPezzi(this.props.Barcode.BarcodeSelected);
-    this.props.fetchQuantitaAncorUtil(this.props.Barcode.BarcodeSelected);
-    this.props.fetchQuantitaRiporUtil(this.props.Barcode.BarcodeSelected);
-    this.props.fetchDurataLavorazione(this.props.Barcode.BarcodeSelected);
+    this.props.fetchForChiusuraLavorazione(this.props.Barcode.BarcodeSelected);
+
     if (this.props.Barcode.Status === "Chiusura ODP") {
       this.setState({ chiusuraODP: true });
     }
@@ -38,7 +32,7 @@ class Chiusura extends React.Component {
           onClick={() => {
             history.push("/Riporto");
             this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-              status: "Chiusura Sospesa"
+              status: "Chiusura Sospesa",
             });
           }}
           className="ui button negative"
@@ -65,7 +59,7 @@ class Chiusura extends React.Component {
             this.setState({ chiusuraODP: true });
             this.props.setChiusuraODP();
             this.props.editBarcodeStatus(this.props.Barcode.BarcodeSelected, {
-              status: "Chiusura ODP"
+              status: "Chiusura ODP",
             });
           }}
           className="ui button negative"
@@ -185,7 +179,7 @@ class Chiusura extends React.Component {
     );
   }
 }
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return state;
 };
 

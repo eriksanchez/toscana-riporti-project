@@ -53,86 +53,90 @@ export const selectBarcode = (barcode) => ({
   payload: barcode,
 });
 //using json server
-export const fetchCliente = (selectedBarcode) => async (dispatch) => {
+export const fetchForAttrezzaggio = (selectedBarcode) => async (dispatch) => {
   const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const clienteFromBarcodeSelected = response.data.cliente;
-  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
-};
-
-export const fetchArticolo = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const articoloFromBarcodeSelected = response.data.articolo;
-  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
-};
-
-export const fetchNote = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const noteFromBarcodeSelected = response.data.note;
-  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
-};
-
-export const fetchQuantita = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const quantitaFromBarcodeSelected = response.data.quantita;
-  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
-};
-
-export const fetchRicettaAncorante = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
+  const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
+
+  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
   dispatch({
     type: GET_RICETTA_ANCORANTE,
     payload: ricettaAncoranteFromBarcodeSelected,
   });
-};
-
-export const fetchRicettaRiporto = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
   dispatch({
     type: GET_RICETTA_RIPORTO,
     payload: ricettaRiportoFromBarcodeSelected,
   });
 };
 
-export const fetchNumPezzi = (selectedBarcode) => async (dispatch) => {
+export const fetchForRiporto = (selectedBarcode) => async (dispatch) => {
   const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
+  const clienteFromBarcodeSelected = response.data.cliente;
+  const articoloFromBarcodeSelected = response.data.articolo;
+  const noteFromBarcodeSelected = response.data.note;
+  const quantitaFromBarcodeSelected = response.data.quantita;
+  const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
+  const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
   const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
-  dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
-};
-
-export const fetchDataOra = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
   const dataOraFromBarcodeSelected = response.data.dataOra;
+
+  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
+  dispatch({
+    type: GET_RICETTA_ANCORANTE,
+    payload: ricettaAncoranteFromBarcodeSelected,
+  });
+  dispatch({
+    type: GET_RICETTA_RIPORTO,
+    payload: ricettaRiportoFromBarcodeSelected,
+  });
+  dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
   dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
 };
-
-export const fetchQuantitaAncorUtil = (selectedBarcode) => async (dispatch) => {
+export const fetchForChiusuraLavorazione = (selectedBarcode) => async (
+  dispatch
+) => {
   const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
+  const clienteFromBarcodeSelected = response.data.cliente;
+  const articoloFromBarcodeSelected = response.data.articolo;
+  const noteFromBarcodeSelected = response.data.note;
+  const quantitaFromBarcodeSelected = response.data.quantita;
+
+  const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
+  const dataOraFromBarcodeSelected = response.data.dataOra;
   const quantitaAncorFromBarcodeSelected = response.data.quantitaAncorante;
+  const quantitaRiporFromBarcodeSelected = response.data.quantitaRiporto;
+  const durataLavorazioneFromBarcodeSelected = response.data.durataLavorazione;
+
+  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
+  dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
+  dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
   dispatch({
     type: GET_QUANTITA_ANCORANTE_UTILIZ,
     payload: quantitaAncorFromBarcodeSelected,
   });
-};
-
-export const fetchQuantitaRiporUtil = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const quantitaRiporFromBarcodeSelected = response.data.quantitaRiporto;
   dispatch({
     type: GET_QUANTITA_RIPORTO_UTILZ,
     payload: quantitaRiporFromBarcodeSelected,
   });
-};
-
-export const fetchDurataLavorazione = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const durataLavorazioneFromBarcodeSelected = response.data.durataLavorazione;
   dispatch({
     type: GET_DURATA_LAVORAZIONE,
     payload: durataLavorazioneFromBarcodeSelected,
   });
 };
+
 //with api use barcodeSelectedData = response.data.filter(bsd ...)
 //with apiTest(Json Server) barcodeSelectedData = response.data.barcode(bsd ...)
 export const fetchBarcodeCheck = (selectedBarcode) => async (dispatch) => {
