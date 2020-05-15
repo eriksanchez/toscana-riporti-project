@@ -73,7 +73,7 @@
       "quantitaAncorante": 542,
       "quantitaRiporto": 3433,
       "durataLavorazione": 234,
-      "status": ""
+      "status": "Attrezzaggio Started"
     },
     {
       "id": 10292,
@@ -88,7 +88,7 @@
       "quantitaAncorante": 234,
       "quantitaRiporto": 3444,
       "durataLavorazione": 220,
-      "status": ""
+      "status": "Chiusura ODP"
     },
     {
       "id": 49432,

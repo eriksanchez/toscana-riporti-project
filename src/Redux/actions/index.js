@@ -38,8 +38,12 @@ export const startTime = (time) => ({
 
 //Operatore action creators
 export const fetchOperatore = () => async (dispatch) => {
-  const response = await JsonServerApi.get("/operatores");
-  dispatch({ type: GET_OPERATORE, payload: response.data });
+  try {
+    const response = await JsonServerApi.get("/operatores");
+    dispatch({ type: GET_OPERATORE, payload: response.data });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 
 export const selectOperatore = (operatore) => ({
@@ -54,128 +58,152 @@ export const selectBarcode = (barcode) => ({
 });
 //using json server
 export const fetchForAttrezzaggio = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const clienteFromBarcodeSelected = response.data.cliente;
-  const articoloFromBarcodeSelected = response.data.articolo;
-  const noteFromBarcodeSelected = response.data.note;
-  const quantitaFromBarcodeSelected = response.data.quantita;
-  const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
-  const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
+  try {
+    const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
+    const clienteFromBarcodeSelected = response.data.cliente;
+    const articoloFromBarcodeSelected = response.data.articolo;
+    const noteFromBarcodeSelected = response.data.note;
+    const quantitaFromBarcodeSelected = response.data.quantita;
+    const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
+    const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
 
-  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
-  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
-  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
-  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
-  dispatch({
-    type: GET_RICETTA_ANCORANTE,
-    payload: ricettaAncoranteFromBarcodeSelected,
-  });
-  dispatch({
-    type: GET_RICETTA_RIPORTO,
-    payload: ricettaRiportoFromBarcodeSelected,
-  });
+    dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+    dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+    dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+    dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
+    dispatch({
+      type: GET_RICETTA_ANCORANTE,
+      payload: ricettaAncoranteFromBarcodeSelected,
+    });
+    dispatch({
+      type: GET_RICETTA_RIPORTO,
+      payload: ricettaRiportoFromBarcodeSelected,
+    });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 
 export const fetchForRiporto = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const clienteFromBarcodeSelected = response.data.cliente;
-  const articoloFromBarcodeSelected = response.data.articolo;
-  const noteFromBarcodeSelected = response.data.note;
-  const quantitaFromBarcodeSelected = response.data.quantita;
-  const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
-  const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
-  const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
-  const dataOraFromBarcodeSelected = response.data.dataOra;
+  try {
+    const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
+    const clienteFromBarcodeSelected = response.data.cliente;
+    const articoloFromBarcodeSelected = response.data.articolo;
+    const noteFromBarcodeSelected = response.data.note;
+    const quantitaFromBarcodeSelected = response.data.quantita;
+    const ricettaAncoranteFromBarcodeSelected = response.data.ricettaAncorante;
+    const ricettaRiportoFromBarcodeSelected = response.data.ricettaRiporto;
+    const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
+    const dataOraFromBarcodeSelected = response.data.dataOra;
 
-  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
-  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
-  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
-  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
-  dispatch({
-    type: GET_RICETTA_ANCORANTE,
-    payload: ricettaAncoranteFromBarcodeSelected,
-  });
-  dispatch({
-    type: GET_RICETTA_RIPORTO,
-    payload: ricettaRiportoFromBarcodeSelected,
-  });
-  dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
-  dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
+    dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+    dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+    dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+    dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
+    dispatch({
+      type: GET_RICETTA_ANCORANTE,
+      payload: ricettaAncoranteFromBarcodeSelected,
+    });
+    dispatch({
+      type: GET_RICETTA_RIPORTO,
+      payload: ricettaRiportoFromBarcodeSelected,
+    });
+    dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
+    dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 export const fetchForChiusuraLavorazione = (selectedBarcode) => async (
   dispatch
 ) => {
-  const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
-  const clienteFromBarcodeSelected = response.data.cliente;
-  const articoloFromBarcodeSelected = response.data.articolo;
-  const noteFromBarcodeSelected = response.data.note;
-  const quantitaFromBarcodeSelected = response.data.quantita;
+  try {
+    const response = await JsonServerApi.get(`/barcode/${selectedBarcode}`);
+    const clienteFromBarcodeSelected = response.data.cliente;
+    const articoloFromBarcodeSelected = response.data.articolo;
+    const noteFromBarcodeSelected = response.data.note;
+    const quantitaFromBarcodeSelected = response.data.quantita;
 
-  const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
-  const dataOraFromBarcodeSelected = response.data.dataOra;
-  const quantitaAncorFromBarcodeSelected = response.data.quantitaAncorante;
-  const quantitaRiporFromBarcodeSelected = response.data.quantitaRiporto;
-  const durataLavorazioneFromBarcodeSelected = response.data.durataLavorazione;
+    const numPezziFromBarcodeSelected = response.data.numPezziLavorati;
+    const dataOraFromBarcodeSelected = response.data.dataOra;
+    const quantitaAncorFromBarcodeSelected = response.data.quantitaAncorante;
+    const quantitaRiporFromBarcodeSelected = response.data.quantitaRiporto;
+    const durataLavorazioneFromBarcodeSelected =
+      response.data.durataLavorazione;
 
-  dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
-  dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
-  dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
-  dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
-  dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
-  dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
-  dispatch({
-    type: GET_QUANTITA_ANCORANTE_UTILIZ,
-    payload: quantitaAncorFromBarcodeSelected,
-  });
-  dispatch({
-    type: GET_QUANTITA_RIPORTO_UTILZ,
-    payload: quantitaRiporFromBarcodeSelected,
-  });
-  dispatch({
-    type: GET_DURATA_LAVORAZIONE,
-    payload: durataLavorazioneFromBarcodeSelected,
-  });
+    dispatch({ type: GET_CLIENTE, payload: clienteFromBarcodeSelected });
+    dispatch({ type: GET_ARTICOLO, payload: articoloFromBarcodeSelected });
+    dispatch({ type: GET_NOTE, payload: noteFromBarcodeSelected });
+    dispatch({ type: GET_QUANTITA, payload: quantitaFromBarcodeSelected });
+    dispatch({ type: GET_NUM_PEZZI, payload: numPezziFromBarcodeSelected });
+    dispatch({ type: GET_DATA_ORA, payload: dataOraFromBarcodeSelected });
+    dispatch({
+      type: GET_QUANTITA_ANCORANTE_UTILIZ,
+      payload: quantitaAncorFromBarcodeSelected,
+    });
+    dispatch({
+      type: GET_QUANTITA_RIPORTO_UTILZ,
+      payload: quantitaRiporFromBarcodeSelected,
+    });
+    dispatch({
+      type: GET_DURATA_LAVORAZIONE,
+      payload: durataLavorazioneFromBarcodeSelected,
+    });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 
 //with api use barcodeSelectedData = response.data.filter(bsd ...)
 //with apiTest(Json Server) barcodeSelectedData = response.data.barcode(bsd ...)
 export const fetchBarcodeCheck = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get("/barcode");
-  const barcodeSelectedData = response.data.filter((bsd) => {
-    return bsd.id === parseInt(selectedBarcode);
-  });
-  if (barcodeSelectedData.length) {
-    dispatch({ type: BARCODE_CHECK, payload: barcodeSelectedData });
-    return true;
-  } else return false;
+  try {
+    const response = await JsonServerApi.get("/barcode");
+    const barcodeSelectedData = response.data.filter((bsd) => {
+      return bsd.id === parseInt(selectedBarcode);
+    });
+    if (barcodeSelectedData.length) {
+      dispatch({ type: BARCODE_CHECK, payload: barcodeSelectedData });
+      return true;
+    } else return false;
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 export const fetchStatusCheck = (selectedBarcode) => async (dispatch) => {
-  const response = await JsonServerApi.get("/barcode");
-  response.data.filter((bsd) => {
-    if (bsd.id === parseInt(selectedBarcode)) {
-      if (
-        bsd.status === "Attrezzaggio Sospeso" ||
-        bsd.status === "Attrezzaggio Ripreso"
-      ) {
-        dispatch({
-          type: ATTREZZAGGIO_RIPRESO_STATUS,
-        });
-        history.push("/Attrezzaggio");
-      } else if (bsd.status === "Attrezzaggio Completato") {
-        dispatch({ type: ATTREZZAGGIO_COMPLETATO_STATUS, payload: bsd.status });
-        history.push("/Riporto");
-      } else if (bsd.status === "Riporto Completato") {
-        dispatch({ type: RIPORTO_COMPLETATO_STATUS, payload: bsd.status });
-        history.push("/Chiusura");
-      } else if (bsd.status === "Chiusura ODP") {
-        dispatch({ type: CHIUSURA_ODP, payload: bsd.status });
-        history.push("/Chiusura");
-      } else {
-        history.push("/Attrezzaggio");
-        if (bsd.status === "") setAttrezzaggioStarted();
+  try {
+    const response = await JsonServerApi.get("/barcode");
+    response.data.filter((bsd) => {
+      if (bsd.id === parseInt(selectedBarcode)) {
+        if (
+          bsd.status === "Attrezzaggio Sospeso" ||
+          bsd.status === "Attrezzaggio Ripreso"
+        ) {
+          dispatch({
+            type: ATTREZZAGGIO_RIPRESO_STATUS,
+          });
+          history.push("/Attrezzaggio");
+        } else if (bsd.status === "Attrezzaggio Completato") {
+          dispatch({
+            type: ATTREZZAGGIO_COMPLETATO_STATUS,
+            payload: bsd.status,
+          });
+          history.push("/Riporto");
+        } else if (bsd.status === "Riporto Completato") {
+          dispatch({ type: RIPORTO_COMPLETATO_STATUS, payload: bsd.status });
+          history.push("/Chiusura");
+        } else if (bsd.status === "Chiusura ODP") {
+          dispatch({ type: CHIUSURA_ODP, payload: bsd.status });
+          history.push("/Chiusura");
+        } else {
+          history.push("/Attrezzaggio");
+          if (bsd.status === "") setAttrezzaggioStarted();
+        }
       }
-    }
-  });
+    });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
 
 //Time stamps action creators
@@ -233,7 +261,11 @@ export const setChiusuraODP = (status) => ({
 //Test posting to api
 
 export const editBarcodeStatus = (id, status) => async (dispatch) => {
-  const response = await JsonServerApi.patch(`/barcode/${id}`, status);
+  try {
+    const response = await JsonServerApi.patch(`/barcode/${id}`, status);
 
-  dispatch({ type: ATTREZZAGGIO_SOSPESO_STATUS, payload: response.data });
+    dispatch({ type: ATTREZZAGGIO_SOSPESO_STATUS, payload: response.data });
+  } catch (e) {
+    console.log("Error: ", e.message);
+  }
 };
